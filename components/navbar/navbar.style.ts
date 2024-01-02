@@ -114,3 +114,10 @@ export const ThirdSpan = styled.span<{ $isShow: boolean }>`
   background-color: #000000;
   transition: all 0.3s ease-in-out;
 `;
+
+export const DekstopContainer = styled.div`
+  display: flex;
+  @media (width <= 954px) {
+    display: none;
+  }
+`;
