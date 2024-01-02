@@ -1,35 +1,96 @@
-# Next.js + Jest
+<div align="center">
+  <a href="https://github.com/cvzamannow/landing-page">
+    <img src="assets/ReadmeAssets/CVZN.svg" alt="Logo" width="80" height="80">
+  </a>
 
-This example shows how to configure Jest to work with Next.js.
+  <h3 align="center">DIGI Dream</h3>
 
-This includes Next.js' built-in support for Global CSS, CSS Modules and TypeScript. This example also shows how to use Jest with the App Router and React Server Components.
+  <div align="center">
+  <!-- <a href="https://github.com/cvzamannow/landing-page/actions/workflows/feature-testing.yml">
+        <img src="https://github.com/cvzamannow/landing-page/actions/workflows/feature-testing.yml/badge.svg?" alt="testing status">
+  </a>
+  <a href="https://github.com/cvzamannow/landing-page/actions/workflows/dev-deployment.yml">
+        <img src="https://github.com/cvzamannow/landing-page/actions/workflows/dev-deployment.yml/badge.svg?" alt="deploy status">
+  </a> -->
+  </div>
+</div>
 
-> **Note:** Since tests can be co-located alongside other files inside the App Router, we have placed those tests in `app/` to demonstrate this behavior (which is different than `pages/`). You can still place all tests in `__tests__` if you prefer.
+# Company profile
 
-## Deploy your own
+This is the repository for the CVZN landing page. We build powerful and responsive web applications with Next.js technology
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-jest&project-name=with-jest&repository-name=with-jest)
+## Installation
 
-## How to Use
+1. Clone this repository:
 
-Quickly get started using [Create Next App](https://github.com/vercel/next.js/tree/canary/packages/create-next-app#readme)!
+   ### With SSH
 
-In your terminal, run the following command:
+   ```bash
+   git@github.com:cvzamannow/company-profile.git
 
-```bash
-npx create-next-app --example with-jest with-jest-app
-```
+   ```
 
-```bash
-yarn create next-app --example with-jest with-jest-app
-```
+   ### With https
 
-```bash
-pnpm create next-app --example with-jest with-jest-app
-```
+   ```bash
+   https://github.com/cvzamannow/company-profile.git
 
-## Running Tests
+   ```
 
-```bash
-npm test
-```
+2. Move to the project directory:
+
+   ```bash
+   cd company-profile
+
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   yarn
+
+   ```
+
+## Use
+
+1. To run Project:
+
+   ```bash
+   yarn dev
+   ```
+
+2. open the site in your favorite browser:
+
+   ```bash
+   http://localhost:3000
+
+   ```
+
+## Contribution
+
+If you want to create a new feature, please follow the steps below:
+
+1. Fork or Clone this repository.
+
+2. Create a new feature branch:
+
+   ```bash
+   git checkout -b new-features
+
+   ```
+
+3. Make the necessary changes and commit:
+
+   ```bash
+   git commit -m "Change description"
+
+   ```
+
+4. Push the changes to the feature branch:
+
+   ```bash
+   git push origin new-features
+
+   ```
+
+5. Create a Pull Request in this repository.
