@@ -1,5 +1,5 @@
-"use client";
-import { Pages } from "./page.style";
+'use client';
+import { Pages } from './page.style';
 
 export default function Page() {
   return (
