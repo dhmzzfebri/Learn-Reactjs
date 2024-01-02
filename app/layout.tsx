@@ -1,7 +1,7 @@
-import StyledComponentsRegistry from "lib/registry";
+import StyledComponentsRegistry from 'lib/registry';
 
 export const metadata = {
-  title: "App Router",
+  title: 'App Router',
 };
 
 export default function RootLayout({
