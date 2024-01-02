@@ -1,7 +1,7 @@
 <div align="center">
-  <a href="https://github.com/cvzamannow/landing-page">
+  <!-- <a href="https://github.com/cvzamannow/landing-page">
     <img src="assets/ReadmeAssets/CVZN.svg" alt="Logo" width="80" height="80">
-  </a>
+  </a> -->
 
   <h3 align="center">DIGI Dream</h3>
 
