@@ -1,7 +1,10 @@
-export const metadata = {
-  title: 'App Router',
-}
+"use client";
+import { Pages } from "./page.style";
 
 export default function Page() {
-  return <h1>App Router</h1>
+  return (
+    <Pages>
+      <h1>Halo</h1>
+    </Pages>
+  );
 }
