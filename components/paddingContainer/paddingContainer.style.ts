@@ -4,6 +4,6 @@ export const Padding = styled.div`
   width: 100%;
   padding: 0;
   @media (width >= 768px) {
-    padding: 0 1rem;
+    padding: 0 4rem;
   }
 `;

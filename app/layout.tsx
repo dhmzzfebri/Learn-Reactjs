@@ -1,4 +1,5 @@
 import StyledComponentsRegistry from 'lib/registry';
+import '../styles/global.css';
 
 export const metadata = {
   title: 'Digi Dreams',
