@@ -1,7 +1,7 @@
 import StyledComponentsRegistry from 'lib/registry';
 
 export const metadata = {
-  title: 'App Router',
+  title: 'Digi Dreams',
 };
 
 export default function RootLayout({
