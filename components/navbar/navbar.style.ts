@@ -5,7 +5,6 @@ export const NavContainer = styled.nav`
   padding: 1.2rem 0;
   align-items: center;
   width: 100%;
-  font-family: sans-serif;
 `;
 
 export const TitleContainer = styled.div`
@@ -23,6 +22,9 @@ export const ListLink = styled.ul`
   display: flex;
   list-style: none;
   align-items: center;
+  @media (width <= 954px) {
+    display: none;
+  }
 `;
 
 export const ListItem = styled.li<{ $isSelect: boolean }>`
@@ -35,7 +37,7 @@ export const ListItem = styled.li<{ $isSelect: boolean }>`
     &:hover {
       color: ${(param) => (param.$isSelect == true ? '#383838' : '#383838')};
       text-decoration: none;
-      font-weight: ${(param) => (param.$isSelect == true ? '700' : '500')};
+      font-weight: ${(param) => (param.$isSelect == true ? '700' : '400')};
     }
   }
 `;
@@ -50,6 +52,9 @@ export const NavWrapper = styled.div`
 export const ContactContainer = styled.div`
   height: 2.6rem;
   width: 7rem;
+  @media (width <= 954px) {
+    display: none;
+  }
   a {
     font-size: 1.1rem;
     border-radius: 3rem;
@@ -67,4 +72,45 @@ export const ContactContainer = styled.div`
       transition: 0.3s;
     }
   }
+`;
+
+export const Hamburger = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  height: auto;
+  cursor: pointer;
+  width: auto;
+  flex-direction: column;
+  @media (width >= 954px) {
+    display: none;
+  }
+`;
+
+export const FirstSpan = styled.span<{ $isShow: boolean }>`
+  height: 0.2rem;
+  width: 2rem;
+  margin: 0 0 0.5rem 0;
+  background-color: #000000;
+  transition: all 0.3s ease-in-out;
+  transform: ${(props) =>
+    props.$isShow ? 'translateY(12px) rotate(45deg)' : ''};
+`;
+export const SecondSpan = styled.span<{ $isShow: boolean }>`
+  height: 0.2rem;
+  width: 2rem;
+  margin: 0 0 0.5rem 0;
+  background-color: #000000;
+  opacity: ${(props) => (props.$isShow ? '0' : '1')};
+  transition: all 0.3s ease-in-out;
+`;
+export const ThirdSpan = styled.span<{ $isShow: boolean }>`
+  height: 0.2rem;
+  width: 2rem;
+  transform: ${(props) =>
+    props.$isShow ? ' translateY(-9px) rotate(-45deg)' : ''};
+  background-color: #000000;
+  transition: all 0.3s ease-in-out;
 `;
