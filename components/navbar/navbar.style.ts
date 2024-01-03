@@ -23,12 +23,17 @@ export const ListLink = styled.ul`
   list-style: none;
   align-items: center;
   @media (width <= 954px) {
-    display: none;
+    flex-direction: column;
+    align-items: baseline;
+    margin: 0 0 1rem 0;
   }
 `;
 
 export const ListItem = styled.li<{ $isSelect: boolean }>`
   margin: 0 1rem;
+  @media (width <= 954px) {
+    margin: 0 0 0.3rem 0;
+  }
   a {
     font-size: 1.2rem;
     color: ${(param) => (param.$isSelect == true ? '#383838' : '#8FA0AD')};
@@ -47,14 +52,15 @@ export const NavWrapper = styled.div`
   width: 100%;
   align-items: center;
   justify-content: space-between;
+  overflow: hidden;
+  //overflow-x: hidden;
+  //overflow-y:;
 `;
 
 export const ContactContainer = styled.div`
   height: 2.6rem;
   width: 7rem;
-  @media (width <= 954px) {
-    display: none;
-  }
+
   a {
     font-size: 1.1rem;
     border-radius: 3rem;
@@ -120,4 +126,19 @@ export const DekstopContainer = styled.div`
   @media (width <= 954px) {
     display: none;
   }
+`;
+
+export const MobileContainer = styled.div<{ $isShow: boolean }>`
+  display: flex;
+  padding: 1.2rem 1.2rem;
+  position: absolute;
+  flex-direction: column;
+  background-color: green;
+  height: auto;
+  width: 12rem;
+  top: 3rem;
+  border-radius: 1rem;
+  transition: all 0.3s ease-in-out;
+  right: ${(props) => (props.$isShow ? '0' : '-100%')};
+  z-index: 10;
 `;

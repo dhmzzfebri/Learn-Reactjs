@@ -1,18 +1,20 @@
 import { useState } from 'react';
 import { Hamburger, FirstSpan, SecondSpan, ThirdSpan } from './navbar.style';
 
-export default function HamburgerIcon() {
-  const [isShow, setIsShow] = useState(false);
+interface HamburgerProps {
+  handleShow: () => void;
+  condition: boolean;
+}
 
-  const handleShow = () => {
-    setIsShow(!isShow);
-  };
-
+export default function HamburgerIcon({
+  handleShow,
+  condition,
+}: HamburgerProps) {
   return (
     <Hamburger onClick={handleShow}>
-      <FirstSpan $isShow={isShow}></FirstSpan>
-      <SecondSpan $isShow={isShow}></SecondSpan>
-      <ThirdSpan $isShow={isShow}></ThirdSpan>
+      <FirstSpan $isShow={condition}></FirstSpan>
+      <SecondSpan $isShow={condition}></SecondSpan>
+      <ThirdSpan $isShow={condition}></ThirdSpan>
     </Hamburger>
   );
 }
