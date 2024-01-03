@@ -17,7 +17,7 @@ export default function Navbar() {
   return (
     <NavContainer className={inter.className}>
       <PaddingContainer>
-        <NavWrapper>
+        <NavWrapper $isShow={isShow}>
           <Title />
           <DesktopItem />
           <HamburgerIcon handleShow={handleShow} condition={isShow} />
