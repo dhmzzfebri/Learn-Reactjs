@@ -1,5 +1,15 @@
 import styled from 'styled-components';
 
+export const NavWrapper = styled.div`
+  display: flex;
+  padding: 19px 0;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+`;
+
 export const TitleContainer = styled.div`
   display: flex;
   a {
@@ -8,6 +18,26 @@ export const TitleContainer = styled.div`
     h1 {
       font-size: 24px;
     }
+  }
+`;
+
+export const MenuContainer = styled.div<{ $isShow: boolean }>`
+  display: flex;
+  justify-content: space-between;
+  @media (width <= 954px) {
+    display: flex;
+    padding: 1rem 0;
+    overflow: hidden;
+    position: absolute;
+    flex-direction: column;
+    background-color: #2d2d2d;
+    height: auto;
+    width: 320px;
+    top: 70px;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+    right: ${(props) => (props.$isShow ? '0' : '-800px')};
+    z-index: 10;
   }
 `;
 
@@ -56,16 +86,34 @@ export const ListItem = styled.li<{ $isSelect: boolean }>`
   }
 `;
 
-export const NavWrapper = styled.div`
-  display: flex;
-  padding: 19px 0;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  z-index: 10;
+export const ContactContainer = styled.div`
+  a {
+    font-size: 16px;
+    border-radius: 32px;
+    color: #383838;
+    background-color: white;
+    display: flex;
+    text-decoration: none;
+    border: 1px solid #383838;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 120px;
+    margin: 0 0 0 1rem;
+    &:hover {
+      background-color: #383838;
+      color: white;
+      transition: 0.3s;
+    }
+    @media (width >= 954px) {
+      display: none;
+    }
+  }
 `;
 
-export const ContactContainer = styled.div`
+export const HamburgerContainer = styled.div`
+  display: flex;
+  position: relative;
   a {
     font-size: 16px;
     border-radius: 32px;
@@ -80,23 +128,12 @@ export const ContactContainer = styled.div`
       transition: 0.3s;
     }
     @media (width <= 954px) {
-      height: 40px;
-      width: 112px;
-      margin: 0 0 0 16px;
-      background-color: white;
-      color: #000;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 0;
-      &:hover {
-        background-color: #525252;
-      }
+      display: none;
     }
   }
 `;
 
-export const Hamburger = styled.button`
+export const HamburgerIcon = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -129,6 +166,7 @@ export const SecondSpan = styled.span<{ $isShow: boolean }>`
   opacity: ${(props) => (props.$isShow ? '0' : '1')};
   transition: all 0.3s ease-in-out;
 `;
+
 export const ThirdSpan = styled.span<{ $isShow: boolean }>`
   height: 3px;
   width: 32px;
@@ -141,14 +179,6 @@ export const ThirdSpan = styled.span<{ $isShow: boolean }>`
 export const DekstopContainer = styled.div`
   display: flex;
   @media (width <= 954px) {
-    display: none;
-  }
-`;
-
-export const HamburgerContainer = styled.div`
-  display: flex;
-  position: relative;
-  @media (width >= 954px) {
     display: none;
   }
 `;
