@@ -15,9 +15,6 @@ export const TitleContainer = styled.div`
   a {
     text-decoration: none;
     color: #383838;
-    h1 {
-      font-size: 24px;
-    }
   }
 `;
 
