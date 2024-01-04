@@ -1,10 +1,11 @@
 'use client';
-import { Pages } from './page.style';
+import Navbar from '@/components/navbar/navbar';
 
 export default function Page() {
   return (
-    <Pages>
-      <h1>Halo</h1>
-    </Pages>
+    <>
+      <Navbar />
+      <main></main>
+    </>
   );
 }
