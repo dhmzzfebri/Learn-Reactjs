@@ -5,7 +5,7 @@ export const DivContainer = styled.div`
   display: flex;
   @media (width >= 1444px) {
     justify-content: center;
-    width: 70rem;
+    width: 1120px;
   }
 `;
 
@@ -28,6 +28,6 @@ export const FooterContainer = styled.footer`
   display: flex;
   @media (width >= 1444px) {
     justify-content: center;
-    width: 70rem;
+    width: 1120px;
   }
 `;

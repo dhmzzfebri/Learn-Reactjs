@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { lato } from 'app/fonts';
+import { lato } from '@/app/fonts';
 import { TitleContainer } from './navbar.style';
 
 export default function Title() {

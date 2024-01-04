@@ -18,15 +18,15 @@ export const ListLink = styled.ul`
   @media (width <= 954px) {
     flex-direction: column;
     align-items: baseline;
-    margin: 0 0 1rem 0;
+    margin: 0 0 16px 0;
     width: 100%;
   }
 `;
 
 export const ListItem = styled.li<{ $isSelect: boolean }>`
-  margin: 0 1rem;
+  margin: 0 16px;
   @media (width <= 954px) {
-    margin: 0 0 0rem 0;
+    margin: 0px;
     width: 100%;
   }
   a {
@@ -42,7 +42,7 @@ export const ListItem = styled.li<{ $isSelect: boolean }>`
     @media (width <= 954px) {
       display: block;
       width: 100%;
-      padding: 0.5rem 0 0.5rem 1rem;
+      padding: 8px 0 8px 16px;
       color: white;
       background-color: ${(props) => (props.$isSelect ? '#525252' : '')};
       &:hover {
@@ -58,7 +58,7 @@ export const ListItem = styled.li<{ $isSelect: boolean }>`
 
 export const NavWrapper = styled.div`
   display: flex;
-  padding: 1.2rem 0;
+  padding: 19px 0;
   align-items: center;
   justify-content: space-between;
   width: 100%;
@@ -68,7 +68,7 @@ export const NavWrapper = styled.div`
 export const ContactContainer = styled.div`
   a {
     font-size: 16px;
-    border-radius: 2rem;
+    border-radius: 32px;
     color: #383838;
     display: flex;
     text-decoration: none;
@@ -80,9 +80,9 @@ export const ContactContainer = styled.div`
       transition: 0.3s;
     }
     @media (width <= 954px) {
-      height: 2.5rem;
-      width: 7rem;
-      margin: 0 0 0 1rem;
+      height: 40px;
+      width: 112px;
+      margin: 0 0 0 16px;
       background-color: white;
       color: #000;
       display: flex;
@@ -112,25 +112,26 @@ export const Hamburger = styled.button`
 `;
 
 export const FirstSpan = styled.span<{ $isShow: boolean }>`
-  height: 0.2rem;
-  width: 2rem;
-  margin: 0 0 0.5rem 0;
+  height: 3px;
+  width: 32px;
+  margin: 0 0 8px 0;
   background-color: #000000;
   transition: all 0.3s ease-in-out;
   transform: ${(props) =>
     props.$isShow ? 'translateY(12px) rotate(45deg)' : ''};
 `;
+
 export const SecondSpan = styled.span<{ $isShow: boolean }>`
-  height: 0.2rem;
-  width: 2rem;
-  margin: 0 0 0.5rem 0;
+  height: 3px;
+  width: 32px;
+  margin: 0 0 8px 0;
   background-color: #000000;
   opacity: ${(props) => (props.$isShow ? '0' : '1')};
   transition: all 0.3s ease-in-out;
 `;
 export const ThirdSpan = styled.span<{ $isShow: boolean }>`
-  height: 0.2rem;
-  width: 2rem;
+  height: 3px;
+  width: 32px;
   transform: ${(props) =>
     props.$isShow ? ' translateY(-11px) rotate(-45deg)' : ''};
   background-color: #000000;
@@ -160,10 +161,10 @@ export const MobileContainer = styled.div<{ $isShow: boolean }>`
   flex-direction: column;
   background-color: #2d2d2d;
   height: auto;
-  width: 20rem;
-  top: 3rem;
-  border-radius: 0.8rem;
+  width: 320px;
+  top: 48px;
+  border-radius: 12px;
   transition: all 0.3s ease-in-out;
-  right: ${(props) => (props.$isShow ? '0' : '-50rem')};
+  right: ${(props) => (props.$isShow ? '0' : '-800px')};
   z-index: 10;
 `;

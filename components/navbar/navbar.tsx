@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { NavWrapper, HamburgerContainer } from './navbar.style';
 import Container from '../containerComponents/container';
 import PaddingContainer from '../paddingContainer/paddingContainer';
-import { inter } from 'app/fonts';
+import { inter } from '@/app/fonts';
 import Title from './title';
 import DesktopItem from './dekstopItem';
 import HamburgerIcon from './hamburgerIcon';
