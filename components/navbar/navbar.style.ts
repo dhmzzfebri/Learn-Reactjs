@@ -1,19 +1,5 @@
 import styled from 'styled-components';
 
-export const NavContainer = styled.nav`
-  display: flex;
-  padding: 1.2rem 0;
-  position: fixed;
-  top: 0;
-  background-color: white;
-  align-items: center;
-  width: 100%;
-  z-index: 10;
-  @media (width >= 1444px) {
-    justify-content: center;
-  }
-`;
-
 export const TitleContainer = styled.div`
   display: flex;
   a {

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { NavContainer, NavWrapper, HamburgerContainer } from './navbar.style';
+import { NavWrapper, HamburgerContainer } from './navbar.style';
 import Container from '../containerComponents/container';
 import PaddingContainer from '../paddingContainer/paddingContainer';
 import { inter } from 'app/fonts';
