@@ -1,13 +1,11 @@
 'use client';
-import { Pages } from './page.style';
-import Text from '@/components/text/text';
+import Navbar from '@/components/navbar/navbar';
 
 export default function Page() {
   return (
-    <Pages>
-      <Text type="headline1" tag="p" color="red" weight="900">
-        Halo
-      </Text>
-    </Pages>
+    <>
+      <Navbar />
+      <main></main>
+    </>
   );
 }
