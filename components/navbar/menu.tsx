@@ -15,6 +15,7 @@ import {
 } from './navbar.style';
 import { lato } from '@/app/fonts';
 import { inter } from '@/app/fonts';
+import Text from '../text/text';
 
 interface HamburgerProps {
   handleShow: () => void;
@@ -28,8 +29,10 @@ export default function Menu({ handleShow, condition }: HamburgerProps) {
     <>
       <NavWrapper>
         <TitleContainer>
-          <Link href={'/'}>
-            <h1 className={lato.className}>Digi Dreams</h1>
+          <Link className={lato.className} href={'/'}>
+            <Text tag={'h1'} color="#383838" weight="900" type="subtitle2">
+              Digi Dreams
+            </Text>
           </Link>
         </TitleContainer>
 
