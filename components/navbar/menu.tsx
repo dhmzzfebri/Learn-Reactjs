@@ -4,7 +4,6 @@ import {
   MenuContainer,
   TitleContainer,
   NavWrapper,
-  DekstopContainer,
   ListLink,
   ListItem,
   ContactContainer,

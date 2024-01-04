@@ -175,26 +175,3 @@ export const ThirdSpan = styled.span<{ $isShow: boolean }>`
   background-color: #000000;
   transition: all 0.3s ease-in-out;
 `;
-
-export const DekstopContainer = styled.div`
-  display: flex;
-  @media (width <= 954px) {
-    display: none;
-  }
-`;
-
-export const MobileContainer = styled.div<{ $isShow: boolean }>`
-  display: flex;
-  padding: 1rem 0;
-  overflow: hidden;
-  position: absolute;
-  flex-direction: column;
-  background-color: #2d2d2d;
-  height: auto;
-  width: 320px;
-  top: 48px;
-  border-radius: 12px;
-  transition: all 0.3s ease-in-out;
-  right: ${(props) => (props.$isShow ? '0' : '-800px')};
-  z-index: 10;
-`;
