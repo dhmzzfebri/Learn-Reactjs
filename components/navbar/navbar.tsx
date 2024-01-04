@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { NavContainer, NavWrapper } from './navbar.style';
+import { NavContainer, NavWrapper, HamburgerContainer } from './navbar.style';
+import Container from '../containerComponents/container';
 import PaddingContainer from '../paddingContainer/paddingContainer';
 import { inter } from 'app/fonts';
 import Title from './title';
@@ -15,15 +16,17 @@ export default function Navbar() {
   };
 
   return (
-    <NavContainer className={inter.className}>
-      <PaddingContainer>
-        <NavWrapper $isShow={isShow}>
+    <Container element="nav" position="fixed">
+      <PaddingContainer childContainer={false}>
+        <NavWrapper className={inter.className}>
           <Title />
           <DesktopItem />
-          <HamburgerIcon handleShow={handleShow} condition={isShow} />
-          <MobileItem isShow={isShow} />
+          <HamburgerContainer>
+            <MobileItem isShow={isShow} />
+            <HamburgerIcon handleShow={handleShow} condition={isShow} />
+          </HamburgerContainer>
         </NavWrapper>
       </PaddingContainer>
-    </NavContainer>
+    </Container>
   );
 }

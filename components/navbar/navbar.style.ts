@@ -9,6 +9,9 @@ export const NavContainer = styled.nav`
   align-items: center;
   width: 100%;
   z-index: 10;
+  @media (width >= 1444px) {
+    justify-content: center;
+  }
 `;
 
 export const TitleContainer = styled.div`
@@ -67,12 +70,13 @@ export const ListItem = styled.li<{ $isSelect: boolean }>`
   }
 `;
 
-export const NavWrapper = styled.div<{ $isShow: boolean }>`
+export const NavWrapper = styled.div`
   display: flex;
-  width: 100%;
-  align-items: ${(props) => (props.$isShow ? 'start' : 'center')};
+  padding: 1.2rem 0;
+  align-items: center;
   justify-content: space-between;
-  position: relative;
+  width: 100%;
+  z-index: 10;
 `;
 
 export const ContactContainer = styled.div`
@@ -154,6 +158,14 @@ export const DekstopContainer = styled.div`
   }
 `;
 
+export const HamburgerContainer = styled.div`
+  display: flex;
+  position: relative;
+  @media (width >= 954px) {
+    display: none;
+  }
+`;
+
 export const MobileContainer = styled.div<{ $isShow: boolean }>`
   display: flex;
   padding: 1rem 0;
@@ -166,6 +178,6 @@ export const MobileContainer = styled.div<{ $isShow: boolean }>`
   top: 3rem;
   border-radius: 0.8rem;
   transition: all 0.3s ease-in-out;
-  right: ${(props) => (props.$isShow ? '0' : '-100%')};
+  right: ${(props) => (props.$isShow ? '0' : '-50rem')};
   z-index: 10;
 `;
