@@ -22,10 +22,10 @@ describe('testing navbar component', () => {
     expect(blogText).toBeTruthy();
     expect(intershipText).toBeTruthy();
   });
-  test('check Lets Talk text display', () => {
+  test('check Lets Talk text in Dekstop view', () => {
     render(<Navbar />);
 
     const letsTalk = screen.getByTestId('dekstop-contact');
-    expect(letsTalk).toHaveStyle('display: flex');
+    expect(letsTalk).toHaveStyle('display: block');
   });
 });

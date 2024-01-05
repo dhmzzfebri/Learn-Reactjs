@@ -113,7 +113,7 @@ export const HamburgerContainer = styled.div`
     font-size: 16px;
     border-radius: 32px;
     color: #383838;
-    display: flex;
+
     text-decoration: none;
     border: 1px solid #383838;
     padding: 9px 22px;
