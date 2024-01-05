@@ -1,0 +1,36 @@
+# .github/workflows/preview.yml
+name: test feature
+on:
+  push:
+    branches:
+      - 'feat/*'
+      - 'fix/*'
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Install Dependencies
+        run: yarn
+
+      - name: Build Application
+        run: yarn build
+
+  test:
+    needs: build
+    name: Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Install Dependencies
+        run: yarn
+
+      - name: Run Tests
+        run: yarn test
