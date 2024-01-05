@@ -35,7 +35,7 @@ export default function Menu({ handleShow, condition }: HamburgerProps) {
               color="#383838"
               weight="900"
               type="subtitle2"
-              family="satoshi"
+              family="Lato"
             >
               Digi Dreams
             </Text>

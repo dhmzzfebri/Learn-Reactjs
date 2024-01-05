@@ -18,14 +18,12 @@ enum FontSize {
   headline1 = '72px',
 }
 
-type FontType = 'poppins' | 'inter' | 'satoshi' | 'lato' | 'asap';
-
 interface TextProps {
   children: React.ReactNode;
   type: keyof typeof FontSize;
   tag: ElementType;
   color: string;
-  family: FontType;
+  family: 'Poppins' | 'Inter' | 'Satoshi' | 'Lato' | 'Asap';
   weight: string;
   mobileType?: keyof typeof FontSize;
 }
@@ -47,13 +45,13 @@ export default function Text({
       $weight={weight}
       $mobile_size={FontSize[mobileType]}
       className={
-        family === 'inter'
+        family === 'Inter'
           ? inter.className
-          : family === 'asap'
+          : family === 'Asap'
             ? asap.className
-            : family === 'lato'
+            : family === 'Lato'
               ? lato.className
-              : family === 'poppins'
+              : family === 'Poppins'
                 ? poppins.className
                 : satoshi.className
       }
