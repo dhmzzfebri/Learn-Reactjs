@@ -1,13 +1,20 @@
 import { Inter, Lato, Asap, Poppins } from 'next/font/google';
+import localFont from 'next/font/local';
 
 export const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
 });
 
+export const satoshi = localFont({
+  src: './Satoshi-Regular.ttf',
+  display: 'swap',
+});
+
 export const lato = Lato({
   subsets: ['latin'],
   display: 'swap',
+  variable: '--font-lato',
   weight: ['400', '700', '900'],
 });
 

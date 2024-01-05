@@ -13,8 +13,8 @@ import {
   SecondSpan,
   ThirdSpan,
 } from './navbar.style';
-import { lato } from '@/app/fonts';
-import { inter } from '@/app/fonts';
+import { lato } from '@/app/fonts/fonts';
+import { inter } from '@/app/fonts/fonts';
 import Text from '../text/text';
 
 interface HamburgerProps {
@@ -30,7 +30,13 @@ export default function Menu({ handleShow, condition }: HamburgerProps) {
       <NavWrapper>
         <TitleContainer>
           <Link className={lato.className} href={'/'}>
-            <Text tag={'h1'} color="#383838" weight="900" type="subtitle2">
+            <Text
+              tag={'h1'}
+              color="#383838"
+              weight="900"
+              type="subtitle2"
+              family="satoshi"
+            >
               Digi Dreams
             </Text>
           </Link>
