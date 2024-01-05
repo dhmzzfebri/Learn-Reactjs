@@ -25,7 +25,7 @@ interface TextProps {
   color: string;
   family: 'Poppins' | 'Inter' | 'Satoshi' | 'Lato' | 'Asap';
   weight: string;
-  mobileType?: keyof typeof FontSize;
+  mobileType?: string;
 }
 
 export default function Text({
@@ -35,7 +35,7 @@ export default function Text({
   color,
   weight,
   family,
-  mobileType = 'regular1',
+  mobileType,
 }: TextProps) {
   return (
     <TextComponent
@@ -43,7 +43,7 @@ export default function Text({
       $size={FontSize[type]}
       $color={color}
       $weight={weight}
-      $mobile_size={FontSize[mobileType]}
+      $mobile_size={mobileType}
       className={
         family === 'Inter'
           ? inter.className

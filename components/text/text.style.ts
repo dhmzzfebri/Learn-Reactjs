@@ -10,6 +10,7 @@ export const TextComponent = styled.p<{
   color: ${(props) => props.$color};
   font-weight: ${(props) => props.$weight};
   @media (width <= 588px) {
-    font-size: ${(props) => props.$mobile_size};
+    font-size: ${(props) =>
+      props.$mobile_size !== '' ? props.$mobile_size : props.$size};
   }
 `;
