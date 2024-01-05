@@ -60,7 +60,9 @@ export default function Menu({ handleShow, condition }: HamburgerProps) {
           </ListLink>
 
           <ContactContainer className={inter.className}>
-            <Link href={'contact'}>Lets Talk</Link>
+            <Link data-testid="dekstop-contact" href={'contact'}>
+              Lets Talk
+            </Link>
           </ContactContainer>
         </MenuContainer>
 
