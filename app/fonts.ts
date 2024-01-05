@@ -1,4 +1,4 @@
-import { Inter, Lato } from 'next/font/google';
+import { Inter, Lato, Asap, Poppins } from 'next/font/google';
 
 export const inter = Inter({
   subsets: ['latin'],
@@ -8,5 +8,17 @@ export const inter = Inter({
 export const lato = Lato({
   subsets: ['latin'],
   display: 'swap',
-  weight: '900',
+  weight: ['400', '700', '900'],
+});
+
+export const asap = Asap({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: ['400', '500', '700', '900'],
+});
+
+export const poppins = Poppins({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: ['400', '500', '700', '900'],
 });
