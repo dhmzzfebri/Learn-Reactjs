@@ -25,11 +25,10 @@ export const MenuContainer = styled.div<{ $isShow: boolean }>`
   display: flex;
   justify-content: space-between;
   @media (width <= 954px) {
-    display: flex;
-    padding: 1rem 0;
+    display: block;
+    padding: 1rem 0 1.5rem 0;
     overflow: hidden;
     position: absolute;
-    flex-direction: column;
     background-color: #2d2d2d;
     height: auto;
     width: 320px;
@@ -92,13 +91,9 @@ export const ContactContainer = styled.div`
     border-radius: 32px;
     color: #383838;
     background-color: white;
-    display: flex;
     text-decoration: none;
     border: 1px solid #383838;
-    justify-content: center;
-    align-items: center;
-    height: 40px;
-    width: 120px;
+    padding: 9px 22px;
     margin: 0 0 0 1rem;
     &:hover {
       background-color: #383838;
