@@ -94,14 +94,15 @@ export const ContactContainer = styled.div`
     text-decoration: none;
     border: 1px solid #383838;
     padding: 9px 22px;
+    display: none;
     margin: 0 0 0 1rem;
     &:hover {
       background-color: #383838;
       color: white;
       transition: 0.3s;
     }
-    @media (width >= 954px) {
-      display: none;
+    @media (width <= 954px) {
+      display: inline;
     }
   }
 `;
@@ -113,10 +114,10 @@ export const HamburgerContainer = styled.div`
     font-size: 16px;
     border-radius: 32px;
     color: #383838;
-
     text-decoration: none;
     border: 1px solid #383838;
     padding: 9px 22px;
+    display: inline;
     &:hover {
       background-color: #383838;
       color: white;
@@ -129,7 +130,7 @@ export const HamburgerContainer = styled.div`
 `;
 
 export const HamburgerIcon = styled.button`
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   background-color: transparent;
@@ -138,8 +139,8 @@ export const HamburgerIcon = styled.button`
   cursor: pointer;
   width: auto;
   flex-direction: column;
-  @media (width >= 954px) {
-    display: none;
+  @media (width <= 954px) {
+    display: flex;
   }
 `;
 

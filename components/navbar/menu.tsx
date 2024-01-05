@@ -57,15 +57,17 @@ export default function Menu({ handleShow, condition }: HamburgerProps) {
           </ListLink>
 
           <ContactContainer className={inter.className}>
-            <Link data-testid="dekstop-contact" href={'contact'}>
+            <Link data-testid="mobile-contact" href={'contact'}>
               Lets Talk
             </Link>
           </ContactContainer>
         </MenuContainer>
 
         <HamburgerContainer className={inter.className}>
-          <Link href={'contact'}>Lets Talk</Link>
-          <HamburgerIcon onClick={handleShow}>
+          <Link data-testid="dekstop-contact" href={'contact'}>
+            Lets Talk
+          </Link>
+          <HamburgerIcon data-testid="hamburger-icon" onClick={handleShow}>
             <FirstSpan $isShow={condition}></FirstSpan>
             <SecondSpan $isShow={condition}></SecondSpan>
             <ThirdSpan $isShow={condition}></ThirdSpan>

@@ -25,7 +25,17 @@ describe('testing navbar component', () => {
   test('check Lets Talk text in Dekstop view', () => {
     render(<Navbar />);
 
-    const letsTalk = screen.getByTestId('dekstop-contact');
-    expect(letsTalk).toHaveStyle('display: block');
+    const letsTalkMobile = screen.getByTestId('mobile-contact');
+    const letsTalkDekstop = screen.getByTestId('dekstop-contact');
+
+    expect(letsTalkMobile).toHaveStyle('display: none');
+    expect(letsTalkDekstop).toHaveStyle('display: inline');
+  });
+  test('check hamburger icon in dekstop view', () => {
+    render(<Navbar />);
+
+    const hamburgerIcon = screen.getByTestId('hamburger-icon');
+
+    expect(hamburgerIcon).toHaveStyle('display: none');
   });
 });
