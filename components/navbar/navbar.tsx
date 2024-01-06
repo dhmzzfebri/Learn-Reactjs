@@ -9,7 +9,6 @@ import {
   SecondSpan,
   ThirdSpan,
 } from './navbar.style';
-
 import LinkComponent from './link';
 import React from 'react';
 
