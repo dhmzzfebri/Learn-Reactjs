@@ -25,8 +25,10 @@ export default function Navbar() {
         <NavWrapper>
           <Menu condition={isShow} />
           <HamburgerContainer>
-            <Link href={'contact'}>Lets Talk</Link>
-            <HamburgerIcon onClick={handleShow}>
+            <Link data-testid="dekstop-contact" href={'contact'}>
+              Lets Talk
+            </Link>
+            <HamburgerIcon onClick={handleShow} data-testid="hamburger-icon">
               <FirstSpan $isShow={isShow}></FirstSpan>
               <SecondSpan $isShow={isShow}></SecondSpan>
               <ThirdSpan $isShow={isShow}></ThirdSpan>

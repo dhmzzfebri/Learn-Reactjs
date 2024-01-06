@@ -53,7 +53,7 @@ export default function Menu({ condition }: HamburgerProps) {
         </ListLink>
 
         <ContactContainer>
-          <Link data-testid="dekstop-contact" href={'contact'}>
+          <Link data-testid="mobile-contact" href={'contact'}>
             Lets Talk
           </Link>
         </ContactContainer>
