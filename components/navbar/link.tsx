@@ -8,6 +8,7 @@ import {
   DekstopContact,
   MobileContact,
 } from './navbar.style';
+import Text from '../text/text';
 import React from 'react';
 
 interface HamburgerProps {
@@ -21,7 +22,15 @@ export default function LinkComponent({ condition }: HamburgerProps) {
     <>
       <TitleContainer>
         <Link href={'/'}>
-          <h1>Digi Dreams</h1>
+          <Text
+            tag={'h1'}
+            family="Lato"
+            weight="900"
+            color="#383838"
+            type={'subtitle2'}
+          >
+            Digi Dreams
+          </Text>
         </Link>
       </TitleContainer>
 
