@@ -6,7 +6,7 @@ export const TextComponent = styled.p<{
   $family: string;
   $weight: string;
 }>`
-  font-family: ${(props) => props.$family}, sans-serif;
+  font-family: ${(props) => props.$family};
   font-size: ${(props) => props.$size};
   color: ${(props) => props.$color};
   font-weight: ${(props) => props.$weight};
