@@ -13,8 +13,7 @@ import {
   SecondSpan,
   ThirdSpan,
 } from './navbar.style';
-import { lato } from '@/app/fonts';
-import { inter } from '@/app/fonts';
+import Text from '../text/text';
 
 interface HamburgerProps {
   handleShow: () => void;
@@ -29,12 +28,20 @@ export default function Menu({ handleShow, condition }: HamburgerProps) {
       <NavWrapper>
         <TitleContainer>
           <Link href={'/'}>
-            <h1 className={lato.className}>Digi Dreams</h1>
+            <Text
+              tag={'h1'}
+              family="Lato"
+              color="#383838"
+              weight="900"
+              type="subtitle2"
+            >
+              Digi Dreams
+            </Text>
           </Link>
         </TitleContainer>
 
         <MenuContainer $isShow={condition}>
-          <ListLink className={inter.className}>
+          <ListLink>
             <ListItem $isSelect={pathName === '/'}>
               <Link href={'/'}>Home</Link>
             </ListItem>
@@ -56,12 +63,14 @@ export default function Menu({ handleShow, condition }: HamburgerProps) {
             </ListItem>
           </ListLink>
 
-          <ContactContainer className={inter.className}>
-            <Link href={'contact'}>Lets Talk</Link>
+          <ContactContainer>
+            <Link data-testid="dekstop-contact" href={'contact'}>
+              Lets Talk
+            </Link>
           </ContactContainer>
         </MenuContainer>
 
-        <HamburgerContainer className={inter.className}>
+        <HamburgerContainer>
           <Link href={'contact'}>Lets Talk</Link>
           <HamburgerIcon onClick={handleShow}>
             <FirstSpan $isShow={condition}></FirstSpan>
