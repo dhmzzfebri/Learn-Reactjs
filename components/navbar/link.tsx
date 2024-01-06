@@ -5,14 +5,15 @@ import {
   TitleContainer,
   ListLink,
   ListItem,
-  ContactContainer,
+  DekstopContact,
+  MobileContact,
 } from './navbar.style';
 
 interface HamburgerProps {
   condition: boolean;
 }
 
-export default function Menu({ condition }: HamburgerProps) {
+export default function LinkComponent({ condition }: HamburgerProps) {
   const pathName = usePathname();
 
   return (
@@ -46,12 +47,18 @@ export default function Menu({ condition }: HamburgerProps) {
           </ListItem>
         </ListLink>
 
-        <ContactContainer>
+        <MobileContact>
           <Link data-testid="mobile-contact" href={'contact'}>
             Lets Talk
           </Link>
-        </ContactContainer>
+        </MobileContact>
       </MenuContainer>
+
+      <DekstopContact>
+        <Link data-testid="dekstop-contact" href={'contact'}>
+          Lets Talk
+        </Link>
+      </DekstopContact>
     </>
   );
 }

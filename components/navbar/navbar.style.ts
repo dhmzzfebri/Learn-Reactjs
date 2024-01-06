@@ -98,7 +98,7 @@ export const ListItem = styled.li<{ $isSelect: boolean }>`
   }
 `;
 
-export const ContactContainer = styled.div`
+export const MobileContact = styled.div`
   a {
     font-family: Inter, sans-serif;
     font-size: 16px;
@@ -121,9 +121,35 @@ export const ContactContainer = styled.div`
   }
 `;
 
+export const DekstopContact = styled.div`
+  a {
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    border-radius: 32px;
+    color: #383838;
+    background-color: white;
+    text-decoration: none;
+    border: 1px solid #383838;
+    padding: 9px 22px;
+    display: inline;
+    margin: 0 0 0 1rem;
+    &:hover {
+      background-color: #383838;
+      color: white;
+      transition: 0.3s;
+    }
+    @media (width <= 954px) {
+      display: none;
+    }
+  }
+`;
+
 export const HamburgerContainer = styled.div`
-  display: flex;
+  display: none;
   position: relative;
+  @media (width <= 954px) {
+    display: flex;
+  }
   a {
     font-family: Inter, sans-serif;
     font-size: 16px;
@@ -137,9 +163,6 @@ export const HamburgerContainer = styled.div`
       background-color: #383838;
       color: white;
       transition: 0.3s;
-    }
-    @media (width <= 954px) {
-      display: none;
     }
   }
 `;
