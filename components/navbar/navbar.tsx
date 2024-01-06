@@ -26,9 +26,6 @@ export default function Navbar() {
         <NavWrapper>
           <LinkComponent condition={isShow} />
           <HamburgerContainer>
-            {/* <Link data-testid="dekstop-contact" href={'contact'}>
-              Lets Talk
-            </Link> */}
             <HamburgerIcon onClick={handleShow} data-testid="hamburger-icon">
               <FirstSpan $isShow={isShow}></FirstSpan>
               <SecondSpan $isShow={isShow}></SecondSpan>
