@@ -3,3 +3,28 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+@font-face {
+  font-family: Satoshi;
+  src: url('../app/fonts/Satoshi-Regular.ttf');
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url('../app/fonts/Poppins-Regular.ttf');
+}
+
+@font-face {
+  font-family: Inter;
+  src: url('../app/fonts/Inter-Regular.ttf');
+}
+
+@font-face {
+  font-family: Lato;
+  src: url('../app/fonts/Lato-Regular.ttf');
+}
+
+@font-face {
+  font-family: Asap;
+  src: url('../app/fonts/Asap-Regular.ttf');
+}
