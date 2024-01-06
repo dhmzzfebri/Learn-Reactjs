@@ -1,4 +1,4 @@
-import { ElementType } from 'react';
+import React, { ElementType } from 'react';
 import { TextComponent } from './text.style';
 
 enum FontSize {
@@ -17,19 +17,13 @@ enum FontSize {
   headline1 = '72px',
 }
 
-enum FontFamily {
-  Poppins = 'Poppins',
-  Inter = 'Inter',
-  Lato = 'Lato',
-  Asap = 'Asap',
-  Satoshi = 'Satoshi',
-}
+type FontFamily = 'Poppins' | 'Inter' | 'Lato' | 'Asap' | 'Satoshi';
 
 interface TextProps {
   children: React.ReactNode;
   type: keyof typeof FontSize;
   tag: ElementType;
-  family: keyof typeof FontFamily;
+  family: FontFamily;
   color: string;
   weight: string;
 }
@@ -48,7 +42,7 @@ export default function Text({
       $size={FontSize[type]}
       $color={color}
       $weight={weight}
-      $family={FontFamily[family]}
+      $family={family}
     >
       {children}
     </TextComponent>
