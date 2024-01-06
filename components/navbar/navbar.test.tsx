@@ -6,7 +6,7 @@ describe('testing navbar component', () => {
   test('check title text', () => {
     render(<Navbar />);
     const titleText = screen.getByText('Digi Dreams');
-    expect(titleText).toBeTruthy();
+    expect(titleText).toBeInTheDocument();
   });
   test('test nav menu', () => {
     render(<Navbar />);

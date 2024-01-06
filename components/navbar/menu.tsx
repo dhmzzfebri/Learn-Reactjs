@@ -3,15 +3,9 @@ import Link from 'next/link';
 import {
   MenuContainer,
   TitleContainer,
-  NavWrapper,
   ListLink,
   ListItem,
   ContactContainer,
-  HamburgerContainer,
-  HamburgerIcon,
-  FirstSpan,
-  SecondSpan,
-  ThirdSpan,
 } from './navbar.style';
 
 interface HamburgerProps {
