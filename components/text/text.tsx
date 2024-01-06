@@ -1,6 +1,5 @@
 import { ElementType } from 'react';
 import { TextComponent } from './text.style';
-import { inter, poppins, satoshi, lato, asap } from '@/app/fonts/fonts';
 
 enum FontSize {
   tiny = '12px',
@@ -18,14 +17,21 @@ enum FontSize {
   headline1 = '72px',
 }
 
+enum FontFamily {
+  Poppins = 'Poppins',
+  Inter = 'Inter',
+  Lato = 'Lato',
+  Asap = 'Asap',
+  Satoshi = 'Satoshi',
+}
+
 interface TextProps {
   children: React.ReactNode;
   type: keyof typeof FontSize;
   tag: ElementType;
+  family: keyof typeof FontFamily;
   color: string;
-  family: 'Poppins' | 'Inter' | 'Satoshi' | 'Lato' | 'Asap';
   weight: string;
-  mobileType?: string;
 }
 
 export default function Text({
@@ -35,7 +41,6 @@ export default function Text({
   color,
   weight,
   family,
-  mobileType,
 }: TextProps) {
   return (
     <TextComponent
@@ -43,18 +48,7 @@ export default function Text({
       $size={FontSize[type]}
       $color={color}
       $weight={weight}
-      $mobile_size={mobileType}
-      className={
-        family === 'Inter'
-          ? inter.className
-          : family === 'Asap'
-            ? asap.className
-            : family === 'Lato'
-              ? lato.className
-              : family === 'Poppins'
-                ? poppins.className
-                : satoshi.className
-      }
+      $family={FontFamily[family]}
     >
       {children}
     </TextComponent>

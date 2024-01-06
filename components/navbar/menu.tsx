@@ -32,10 +32,10 @@ export default function Menu({ handleShow, condition }: HamburgerProps) {
           <Link className={lato.className} href={'/'}>
             <Text
               tag={'h1'}
+              family="Lato"
               color="#383838"
               weight="900"
               type="subtitle2"
-              family="Inter"
             >
               Digi Dreams
             </Text>
