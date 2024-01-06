@@ -1,8 +1,7 @@
 import { useState } from 'react';
-import Container from '../containerComponents/container';
 import PaddingContainer from '../paddingContainer/paddingContainer';
-import Menu from './menu';
 import {
+  Nav,
   NavWrapper,
   HamburgerContainer,
   HamburgerIcon,
@@ -10,6 +9,7 @@ import {
   SecondSpan,
   ThirdSpan,
 } from './navbar.style';
+import Menu from './menu';
 import Link from 'next/link';
 
 export default function Navbar() {
@@ -20,15 +20,13 @@ export default function Navbar() {
   };
 
   return (
-    <Container element="nav" position="fixed">
-      <PaddingContainer childContainer={false}>
+    <Nav>
+      <PaddingContainer>
         <NavWrapper>
           <Menu condition={isShow} />
           <HamburgerContainer>
-            <Link data-testid="dekstop-contact" href={'contact'}>
-              Lets Talk
-            </Link>
-            <HamburgerIcon data-testid="hamburger-icon" onClick={handleShow}>
+            <Link href={'contact'}>Lets Talk</Link>
+            <HamburgerIcon onClick={handleShow}>
               <FirstSpan $isShow={isShow}></FirstSpan>
               <SecondSpan $isShow={isShow}></SecondSpan>
               <ThirdSpan $isShow={isShow}></ThirdSpan>
@@ -36,6 +34,6 @@ export default function Navbar() {
           </HamburgerContainer>
         </NavWrapper>
       </PaddingContainer>
-    </Container>
+    </Nav>
   );
 }

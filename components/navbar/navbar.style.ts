@@ -1,5 +1,13 @@
 import styled from 'styled-components';
 
+export const Nav = styled.nav`
+  width: 100%;
+  position: fixed;
+  background-color: white;
+  z-index: 10;
+  top: 0;
+`;
+
 export const NavWrapper = styled.div`
   display: flex;
   padding: 19px 0;
@@ -7,7 +15,10 @@ export const NavWrapper = styled.div`
   justify-content: space-between;
   width: 100%;
   position: relative;
-  z-index: 10;
+  @media (width >= 1444px) {
+    width: 1120px;
+    margin: auto;
+  }
 `;
 
 export const TitleContainer = styled.div`
@@ -17,6 +28,7 @@ export const TitleContainer = styled.div`
     color: #383838;
     h1 {
       font-size: 24px;
+      font-family: Lato, sans-serif;
     }
   }
 `;
@@ -60,6 +72,7 @@ export const ListItem = styled.li<{ $isSelect: boolean }>`
   }
   a {
     font-size: 16px;
+    font-family: Inter, sans-serif;
     color: ${(param) => (param.$isSelect == true ? '#383838' : '#8FA0AD')};
     text-decoration: none;
     font-weight: ${(param) => (param.$isSelect == true ? '700' : '400')};
@@ -87,6 +100,7 @@ export const ListItem = styled.li<{ $isSelect: boolean }>`
 
 export const ContactContainer = styled.div`
   a {
+    font-family: Inter, sans-serif;
     font-size: 16px;
     border-radius: 32px;
     color: #383838;
@@ -111,6 +125,7 @@ export const HamburgerContainer = styled.div`
   display: flex;
   position: relative;
   a {
+    font-family: Inter, sans-serif;
     font-size: 16px;
     border-radius: 32px;
     color: #383838;
