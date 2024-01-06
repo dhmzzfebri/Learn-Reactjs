@@ -50,7 +50,7 @@ export default function Text({
       $weight={weight}
       $family={FontFamily[family]}
     >
-      {children}mmm
+      {children}
     </TextComponent>
   );
 }
