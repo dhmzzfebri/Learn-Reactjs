@@ -8,6 +8,7 @@ import {
   DekstopContact,
   MobileContact,
 } from './navbar.style';
+import React from 'react';
 
 interface HamburgerProps {
   condition: boolean;
