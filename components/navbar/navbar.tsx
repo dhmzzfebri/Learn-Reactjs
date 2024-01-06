@@ -9,9 +9,9 @@ import {
   SecondSpan,
   ThirdSpan,
 } from './navbar.style';
-import Menu from './link';
-import Link from 'next/link';
+
 import LinkComponent from './link';
+import React from 'react';
 
 export default function Navbar() {
   const [isShow, setIsShow] = useState(false);
