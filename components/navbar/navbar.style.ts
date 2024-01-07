@@ -34,7 +34,7 @@ export const MenuContainer = styled.div<{ $isShow: boolean }>`
   justify-content: space-between;
   @media (width <= 954px) {
     display: block;
-    padding: 1rem 0 1.5rem 0;
+    padding: 16px 0 24px 0;
     overflow: hidden;
     position: absolute;
     background-color: #2d2d2d;
