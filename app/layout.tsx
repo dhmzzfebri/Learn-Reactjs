@@ -1,3 +1,4 @@
+import React from 'react';
 import StyledComponentsRegistry from 'lib/registry';
 import '../styles/global.css';
 

@@ -1,3 +1,4 @@
+import React from 'react';
 import { DivContainer, NavContainer, FooterContainer } from './container.style';
 
 interface ContainerProps {
