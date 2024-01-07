@@ -94,7 +94,7 @@ export const ListItem = styled.li<{ $isSelect: boolean }>`
   }
 `;
 
-export const MobileContact = styled.div`
+export const Contact = styled.div<{ $isMobile: boolean }>`
   a {
     font-family: Inter, sans-serif;
     font-size: 16px;
@@ -104,38 +104,15 @@ export const MobileContact = styled.div`
     text-decoration: none;
     border: 1px solid #383838;
     padding: 9px 22px;
-    display: none;
-    margin: 0 0 0 1rem;
+    display: ${(props) => (props.$isMobile ? 'none' : 'inline')};
+    margin: 0 0 0 16px;
     &:hover {
       background-color: #383838;
       color: white;
       transition: 0.3s;
     }
     @media (width <= 954px) {
-      display: inline;
-    }
-  }
-`;
-
-export const DekstopContact = styled.div`
-  a {
-    font-family: Inter, sans-serif;
-    font-size: 16px;
-    border-radius: 32px;
-    color: #383838;
-    background-color: white;
-    text-decoration: none;
-    border: 1px solid #383838;
-    padding: 9px 22px;
-    display: inline;
-    margin: 0 0 0 1rem;
-    &:hover {
-      background-color: #383838;
-      color: white;
-      transition: 0.3s;
-    }
-    @media (width <= 954px) {
-      display: none;
+      display: ${(props) => (props.$isMobile ? 'inline' : 'none')};
     }
   }
 `;

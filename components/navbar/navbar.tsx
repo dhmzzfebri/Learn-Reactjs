@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 import PaddingContainer from '../paddingContainer/paddingContainer';
 import {
@@ -10,7 +11,6 @@ import {
   ThirdSpan,
 } from './navbar.style';
 import LinkComponent from './link';
-import React from 'react';
 
 export default function Navbar() {
   const [isShow, setIsShow] = useState(false);
@@ -23,7 +23,7 @@ export default function Navbar() {
     <Nav>
       <PaddingContainer>
         <NavWrapper>
-          <LinkComponent condition={isShow} />
+          <LinkComponent isVisible={isShow} />
           <HamburgerContainer>
             <HamburgerIcon onClick={handleShow} data-testid="hamburger-icon">
               <FirstSpan $isShow={isShow}></FirstSpan>

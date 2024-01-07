@@ -5,17 +5,16 @@ import {
   TitleContainer,
   ListLink,
   ListItem,
-  DekstopContact,
-  MobileContact,
+  Contact,
 } from './navbar.style';
 import Text from '../text/text';
 import React from 'react';
 
 interface HamburgerProps {
-  condition: boolean;
+  isVisible: boolean;
 }
 
-export default function LinkComponent({ condition }: HamburgerProps) {
+export default function LinkComponent({ isVisible }: HamburgerProps) {
   const pathName = usePathname();
 
   return (
@@ -34,7 +33,7 @@ export default function LinkComponent({ condition }: HamburgerProps) {
         </Link>
       </TitleContainer>
 
-      <MenuContainer $isShow={condition}>
+      <MenuContainer $isShow={isVisible}>
         <ListLink>
           <ListItem $isSelect={pathName === '/'}>
             <Link href={'/'}>Home</Link>
@@ -57,18 +56,18 @@ export default function LinkComponent({ condition }: HamburgerProps) {
           </ListItem>
         </ListLink>
 
-        <MobileContact>
+        <Contact $isMobile={true}>
           <Link data-testid="mobile-contact" href={'contact'}>
             Lets Talk
           </Link>
-        </MobileContact>
+        </Contact>
       </MenuContainer>
 
-      <DekstopContact>
+      <Contact $isMobile={false}>
         <Link data-testid="dekstop-contact" href={'contact'}>
           Lets Talk
         </Link>
-      </DekstopContact>
+      </Contact>
     </>
   );
 }

@@ -1,3 +1,4 @@
+import React from 'react';
 import { screen, render } from '@testing-library/react';
 import Navbar from './navbar';
 import '@testing-library/jest-dom';
