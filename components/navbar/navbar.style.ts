@@ -123,21 +123,6 @@ export const HamburgerContainer = styled.div`
   @media (width <= 954px) {
     display: flex;
   }
-  a {
-    font-family: Inter, sans-serif;
-    font-size: 16px;
-    border-radius: 32px;
-    color: #383838;
-    text-decoration: none;
-    border: 1px solid #383838;
-    padding: 9px 22px;
-    display: inline;
-    &:hover {
-      background-color: #383838;
-      color: white;
-      transition: 0.3s;
-    }
-  }
 `;
 
 export const HamburgerIcon = styled.button`
