@@ -1,5 +1,13 @@
 import styled from 'styled-components';
 
+export const Nav = styled.nav`
+  width: 100%;
+  position: fixed;
+  background-color: white;
+  z-index: 10;
+  top: 0;
+`;
+
 export const NavWrapper = styled.div`
   display: flex;
   padding: 19px 0;
@@ -7,7 +15,10 @@ export const NavWrapper = styled.div`
   justify-content: space-between;
   width: 100%;
   position: relative;
-  z-index: 10;
+  @media (width >= 1444px) {
+    width: 1120px;
+    margin: auto;
+  }
 `;
 
 export const TitleContainer = styled.div`
@@ -22,11 +33,10 @@ export const MenuContainer = styled.div<{ $isShow: boolean }>`
   display: flex;
   justify-content: space-between;
   @media (width <= 954px) {
-    display: flex;
-    padding: 1rem 0;
+    display: block;
+    padding: 16px 0 24px 0;
     overflow: hidden;
     position: absolute;
-    flex-direction: column;
     background-color: #2d2d2d;
     height: auto;
     width: 320px;
@@ -58,6 +68,7 @@ export const ListItem = styled.li<{ $isSelect: boolean }>`
   }
   a {
     font-size: 16px;
+    font-family: Inter, sans-serif;
     color: ${(param) => (param.$isSelect == true ? '#383838' : '#8FA0AD')};
     text-decoration: none;
     font-weight: ${(param) => (param.$isSelect == true ? '700' : '400')};
@@ -83,55 +94,39 @@ export const ListItem = styled.li<{ $isSelect: boolean }>`
   }
 `;
 
-export const ContactContainer = styled.div`
+export const Contact = styled.div<{ $isMobile: boolean }>`
   a {
+    font-family: Inter, sans-serif;
     font-size: 16px;
     border-radius: 32px;
     color: #383838;
     background-color: white;
-    display: flex;
-    text-decoration: none;
-    border: 1px solid #383838;
-    justify-content: center;
-    align-items: center;
-    height: 40px;
-    width: 120px;
-    margin: 0 0 0 1rem;
-    &:hover {
-      background-color: #383838;
-      color: white;
-      transition: 0.3s;
-    }
-    @media (width >= 954px) {
-      display: none;
-    }
-  }
-`;
-
-export const HamburgerContainer = styled.div`
-  display: flex;
-  position: relative;
-  a {
-    font-size: 16px;
-    border-radius: 32px;
-    color: #383838;
-    display: flex;
     text-decoration: none;
     border: 1px solid #383838;
     padding: 9px 22px;
+    display: ${(props) => (props.$isMobile ? 'none' : 'inline')};
+    margin: 0 0 0 16px;
     &:hover {
       background-color: #383838;
       color: white;
       transition: 0.3s;
     }
     @media (width <= 954px) {
-      display: none;
+      display: ${(props) => (props.$isMobile ? 'inline' : 'none')};
     }
   }
 `;
 
+export const HamburgerContainer = styled.div`
+  display: none;
+  position: relative;
+  @media (width <= 954px) {
+    display: flex;
+  }
+`;
+
 export const HamburgerIcon = styled.button`
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   background-color: transparent;
@@ -140,8 +135,8 @@ export const HamburgerIcon = styled.button`
   cursor: pointer;
   width: auto;
   flex-direction: column;
-  @media (width >= 954px) {
-    display: none;
+  @media (width <= 954px) {
+    display: flex;
   }
 `;
 
