@@ -45,11 +45,11 @@ interface TextProps {
    */
   weight: string;
   /**
-   * additional styles if needed
+   * additional padding if needed
    */
   padding?: string;
   /**
-   * additional styles if needed
+   * additional margin if needed
    */
   margin?: string;
 }
