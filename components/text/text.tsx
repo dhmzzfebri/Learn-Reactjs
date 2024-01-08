@@ -70,9 +70,9 @@ export default function Text({
       size={FontSize[type]}
       color={color}
       weight={weight}
-      $family={family}
-      $padding={padding}
-      $margin={margin}
+      family={family}
+      padding={padding}
+      margin={margin}
     >
       {children}
     </TextComponent>
