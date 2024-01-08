@@ -47,7 +47,11 @@ interface TextProps {
   /**
    * additional styles if needed
    */
-  styles?: React.CSSProperties;
+  padding?: string;
+  /**
+   * additional styles if needed
+   */
+  margin?: string;
 }
 
 export default function Text({
@@ -57,7 +61,8 @@ export default function Text({
   color,
   weight,
   family,
-  styles,
+  padding = '0',
+  margin = '0',
 }: TextProps) {
   return (
     <TextComponent
@@ -66,7 +71,8 @@ export default function Text({
       $color={color}
       $weight={weight}
       $family={family}
-      style={styles}
+      $padding={padding}
+      $margin={margin}
     >
       {children}
     </TextComponent>
