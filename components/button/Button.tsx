@@ -39,6 +39,7 @@ export default function Button({
     <>
       <Link href={href || '/'}>
         <StyledButton
+          data-testid={`button--${Type}`}
           className={['button', mode].join(' ')}
           disabled={isDisabled}
           style={style}
