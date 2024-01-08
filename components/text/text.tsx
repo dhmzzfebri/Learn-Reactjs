@@ -67,9 +67,9 @@ export default function Text({
   return (
     <TextComponent
       as={tag}
-      $size={FontSize[type]}
-      $color={color}
-      $weight={weight}
+      size={FontSize[type]}
+      color={color}
+      weight={weight}
       $family={family}
       $padding={padding}
       $margin={margin}
