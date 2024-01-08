@@ -44,6 +44,10 @@ interface TextProps {
    * font weight for text
    */
   weight: string;
+  /**
+   * additional styles if needed
+   */
+  styles?: React.CSSProperties;
 }
 
 export default function Text({
@@ -53,6 +57,7 @@ export default function Text({
   color,
   weight,
   family,
+  styles,
 }: TextProps) {
   return (
     <TextComponent
@@ -61,6 +66,7 @@ export default function Text({
       $color={color}
       $weight={weight}
       $family={family}
+      style={styles}
     >
       {children}
     </TextComponent>
