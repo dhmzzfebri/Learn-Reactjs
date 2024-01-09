@@ -2,35 +2,72 @@ import React from 'react';
 import { useState } from 'react';
 import PaddingContainer from '../paddingContainer/paddingContainer';
 import {
+  MobileTitle,
   Nav,
   NavWrapper,
-  HamburgerContainer,
   HamburgerIcon,
-  FirstSpan,
-  SecondSpan,
-  ThirdSpan,
+  Overlay,
+  Contact,
+  NavOption,
 } from './navbar.style';
-import LinkComponent from './link';
+import Menu from './menu';
+import Text from '../text/text';
+import Link from 'next/link';
+import Image from 'next/image';
+import HamburgerImg from '@/assets/navbar/hamburger.svg';
 
 export default function Navbar() {
   const [isShow, setIsShow] = useState(false);
 
   const handleShow = () => {
     setIsShow(!isShow);
+    document.body.style.overflow = isShow ? 'auto' : 'hidden';
   };
 
   return (
     <Nav>
+      <Overlay $visible={isShow} onClick={handleShow}></Overlay>
       <PaddingContainer>
         <NavWrapper>
-          <LinkComponent isVisible={isShow} />
-          <HamburgerContainer>
-            <HamburgerIcon onClick={handleShow} data-testid="hamburger-icon">
-              <FirstSpan $isShow={isShow}></FirstSpan>
-              <SecondSpan $isShow={isShow}></SecondSpan>
-              <ThirdSpan $isShow={isShow}></ThirdSpan>
-            </HamburgerIcon>
-          </HamburgerContainer>
+          <MobileTitle>
+            <Link href={'/'}>
+              <Text
+                tag={'h1'}
+                family="Lato"
+                weight="900"
+                color="#383838"
+                type={'subtitle2'}
+              >
+                Digi Dreams
+              </Text>
+            </Link>
+          </MobileTitle>
+
+          <NavOption $isShow={isShow}>
+            <Link href={'/'}>
+              <Text
+                tag={'h1'}
+                family="Lato"
+                weight="900"
+                color="#383838"
+                type={'subtitle2'}
+              >
+                Digi Dreams
+              </Text>
+            </Link>
+
+            <Menu />
+
+            <Contact>
+              <Link data-testid="mobile-contact" href={'contact'}>
+                Lets Talk
+              </Link>
+            </Contact>
+          </NavOption>
+
+          <HamburgerIcon onClick={handleShow} data-testid="hamburger-icon">
+            <Image src={HamburgerImg} alt="" />
+          </HamburgerIcon>
         </NavWrapper>
       </PaddingContainer>
     </Nav>
