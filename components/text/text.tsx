@@ -45,7 +45,7 @@ interface TextProps {
    */
   weight: string;
   /**
-   * additional padding if needed
+   * additional styles if needed
    */
   styles?: React.CSSProperties;
 }
