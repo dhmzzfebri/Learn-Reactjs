@@ -26,7 +26,7 @@ export default function Navbar() {
 
   return (
     <Nav>
-      <Overlay $visible={isMobileMenuOpen} onClick={toggleMobileMenu}></Overlay>
+      <Overlay visible={isMobileMenuOpen} onClick={toggleMobileMenu}></Overlay>
 
       <PaddingContainer>
         <NavWrapper>

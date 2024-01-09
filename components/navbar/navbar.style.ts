@@ -65,10 +65,10 @@ export const NavOption = styled.div<{ $isShow: boolean }>`
   }
 `;
 
-export const Overlay = styled.div<{ $visible: boolean }>`
+export const Overlay = styled.div<{ visible: boolean }>`
   display: none;
   @media (width <= 954px) {
-    display: ${(props) => (props.$visible ? 'flex' : 'none')};
+    display: ${(props) => (props.visible ? 'flex' : 'none')};
     position: fixed;
     top: 0;
     left: 0;
