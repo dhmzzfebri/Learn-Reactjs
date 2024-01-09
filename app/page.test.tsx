@@ -7,5 +7,5 @@ import Page from './page';
 
 it('App Router: Works with Server Components', () => {
   render(<Page />);
-  expect(screen.getAllByRole('heading')[0]).toHaveTextContent('Digi Dreams');
+  expect(screen.getByRole('heading')).toHaveTextContent('Digi Dreams');
 });
