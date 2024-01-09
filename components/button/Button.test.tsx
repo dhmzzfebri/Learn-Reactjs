@@ -5,7 +5,7 @@ import Button from './Button';
 describe('Button component', () => {
   it('renders primary button with text', () => {
     const { getByTestId, getByText } = render(
-      <Button Type="primary" Content="Click me" />,
+      <Button type="primary" content="Click me" />,
     );
 
     const button = getByTestId('button--primary');
@@ -18,7 +18,7 @@ describe('Button component', () => {
   it('executes onClick handler when clicked', () => {
     const onClickMock = jest.fn();
     const { getByTestId } = render(
-      <Button Content="text" Type="secondary" onClick={onClickMock} />,
+      <Button content="text" type="secondary" onClick={onClickMock} />,
     );
 
     const button = getByTestId('button--secondary');
