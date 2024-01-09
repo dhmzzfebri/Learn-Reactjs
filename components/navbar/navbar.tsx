@@ -30,7 +30,7 @@ export default function Navbar() {
 
       <PaddingContainer>
         <NavWrapper>
-          <MobileTitle>
+          <MobileTitle data-testid="mobile-title">
             <Link href={'/'}>
               <Text
                 tag={'h1'}
@@ -45,7 +45,7 @@ export default function Navbar() {
           </MobileTitle>
 
           <NavOption $isShow={isShow}>
-            <Link href={'/'}>
+            <Link data-testid="dektop-&-mobile-navbar-is-show" href={'/'}>
               <Text
                 tag={'h1'}
                 family="Lato"
@@ -60,7 +60,7 @@ export default function Navbar() {
             <Menu />
 
             <Contact>
-              <Link data-testid="mobile-contact" href={'contact'}>
+              <Link data-testid="lets-talk" href={'lets-talk'}>
                 Lets Talk
               </Link>
             </Contact>
