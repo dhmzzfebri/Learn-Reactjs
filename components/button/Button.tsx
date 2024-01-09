@@ -7,11 +7,11 @@ export interface ButtonProps {
   /**
    * Enter the button type "primary" or "secondary"
    */
-  Type: 'primary' | 'secondary';
+  type: 'primary' | 'secondary';
   /**
    * Enter content button
    */
-  Content: string;
+  content: string;
   /**
    * Leading to where
    */
@@ -27,25 +27,25 @@ export interface ButtonProps {
 }
 
 export default function Button({
-  Type = 'primary',
-  Content,
+  type = 'primary',
+  content,
   href,
   style,
   ...props
 }: ButtonProps) {
   const [isDisabled, setIsDisabled] = useState(false);
-  const mode = `button--${Type}`;
+  const mode = `button--${type}`;
   return (
     <>
       <Link href={href || '/'}>
         <StyledButton
-          data-testid={`button--${Type}`}
+          data-testid={`button--${type}`}
           className={['button', mode].join(' ')}
           disabled={isDisabled}
           style={style}
           {...props}
         >
-          {Content}
+          {content}
         </StyledButton>
       </Link>
     </>
