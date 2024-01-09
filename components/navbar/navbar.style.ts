@@ -44,13 +44,16 @@ export const NavOption = styled.div<{ $isShow: boolean }>`
     padding: 16px 0 24px 0;
     overflow: hidden;
     position: absolute;
-    background-color: #e8e9eb;
+    background-color: #ffffff;
     height: 100vh;
     width: 250px;
     top: 0;
     transition: all 0.4s ease-in-out;
     left: ${(props) => (props.$isShow ? '-16px' : '-800px')};
     z-index: 20;
+  }
+  @media (width >= 768px) {
+    left: ${(props) => (props.$isShow ? '-100px' : '-800px')};
   }
   a {
     padding: 11px 0 0 16px;
@@ -113,7 +116,7 @@ export const ListItem = styled.li<{ $isSelect: boolean }>`
       background-color: ${(props) => (props.$isSelect ? '#D9D9D9' : '')};
       &:hover {
         background-color: ${(param) =>
-          param.$isSelect == true ? '' : '#E4E4E4'};
+          param.$isSelect == true ? '' : '#F2F1F1'};
         text-decoration: none;
         font-weight: ${(param) => (param.$isSelect ? '700' : '400')};
       }
@@ -136,6 +139,9 @@ export const Contact = styled.div`
       background-color: #383838;
       color: white;
       transition: 0.3s;
+    }
+    @media (width <= 954px) {
+      margin: 0 0 0 16px;
     }
   }
 `;
