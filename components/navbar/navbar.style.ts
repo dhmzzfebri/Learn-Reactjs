@@ -124,13 +124,13 @@ export const ListItem = styled.li<{ $isSelect: boolean }>`
   }
 `;
 
-export const Contact = styled.div`
+export const Contact = styled.div<{ isSelect: boolean }>`
   a {
     font-family: Inter, sans-serif;
     font-size: 16px;
     border-radius: 32px;
     color: #383838;
-    background-color: white;
+    background-color: ${(props) => (props.isSelect ? '#383838' : 'white')};
     text-decoration: none;
     border: 1px solid #383838;
     padding: 9px 22px;

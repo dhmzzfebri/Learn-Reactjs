@@ -15,9 +15,11 @@ import Text from '../text/text';
 import Link from 'next/link';
 import Image from 'next/image';
 import HamburgerImg from '@/assets/navbar/hamburger.svg';
+import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathName = usePathname();
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
@@ -59,7 +61,7 @@ export default function Navbar() {
 
             <Menu />
 
-            <Contact>
+            <Contact isSelect={pathName === 'lets-talk'}>
               <Link data-testid="lets-talk" href={'lets-talk'}>
                 Lets Talk
               </Link>
