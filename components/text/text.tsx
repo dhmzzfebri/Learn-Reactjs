@@ -20,12 +20,34 @@ enum FontSize {
 type FontFamily = 'Poppins' | 'Inter' | 'Lato' | 'Asap' | 'Satoshi';
 
 interface TextProps {
+  /**
+   * text want to display
+   */
   children: React.ReactNode;
+  /**
+   * font size for text
+   */
   type: keyof typeof FontSize;
+  /**
+   * wrapping tag for text
+   */
   tag: ElementType;
+  /**
+   * font family for text
+   */
   family: FontFamily;
+  /**
+   * font color for text
+   */
   color: string;
+  /**
+   * font weight for text
+   */
   weight: string;
+  /**
+   * additional styles if needed
+   */
+  styles?: React.CSSProperties;
 }
 
 export default function Text({
@@ -35,14 +57,16 @@ export default function Text({
   color,
   weight,
   family,
+  styles,
 }: TextProps) {
   return (
     <TextComponent
       as={tag}
-      $size={FontSize[type]}
-      $color={color}
-      $weight={weight}
-      $family={family}
+      size={FontSize[type]}
+      color={color}
+      weight={weight}
+      family={family}
+      style={styles}
     >
       {children}
     </TextComponent>
