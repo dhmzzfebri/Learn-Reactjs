@@ -17,16 +17,16 @@ import Image from 'next/image';
 import HamburgerImg from '@/assets/navbar/hamburger.svg';
 
 export default function Navbar() {
-  const [isShow, setIsShow] = useState(false);
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const handleShow = () => {
-    setIsShow(!isShow);
-    document.body.style.overflow = isShow ? 'auto' : 'hidden';
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!isMobileMenuOpen);
+    document.body.style.overflow = isMobileMenuOpen ? 'auto' : 'hidden';
   };
 
   return (
     <Nav>
-      <Overlay $visible={isShow} onClick={handleShow}></Overlay>
+      <Overlay $visible={isMobileMenuOpen} onClick={toggleMobileMenu}></Overlay>
 
       <PaddingContainer>
         <NavWrapper>
@@ -44,7 +44,7 @@ export default function Navbar() {
             </Link>
           </MobileTitle>
 
-          <NavOption $isShow={isShow}>
+          <NavOption $isShow={isMobileMenuOpen}>
             <Link data-testid="dektop-&-mobile-navbar-is-show" href={'/'}>
               <Text
                 tag={'h1'}
@@ -66,7 +66,10 @@ export default function Navbar() {
             </Contact>
           </NavOption>
 
-          <HamburgerIcon onClick={handleShow} data-testid="hamburger-icon">
+          <HamburgerIcon
+            onClick={toggleMobileMenu}
+            data-testid="hamburger-icon"
+          >
             <Image src={HamburgerImg} alt="" />
           </HamburgerIcon>
         </NavWrapper>
