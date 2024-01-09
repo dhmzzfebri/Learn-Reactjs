@@ -27,6 +27,7 @@ export default function Navbar() {
   return (
     <Nav>
       <Overlay $visible={isShow} onClick={handleShow}></Overlay>
+
       <PaddingContainer>
         <NavWrapper>
           <MobileTitle>
