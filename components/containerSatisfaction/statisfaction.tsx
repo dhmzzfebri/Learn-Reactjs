@@ -1,23 +1,27 @@
+import React from 'react';
 import {
   ContainerStatisfaction,
-  ContainerContent,
   ChildContainer,
   ImgeContainer,
+  ContainerText,
   CustomH3,
   CustomH1,
+  CustomButton,
   RohmanContainer,
   RoidContainer,
   MirzaContainer,
   ClientContainer,
-  CircleDiv,
+  TextClient,
 } from './statisfaction.style';
-import { Button } from './button';
 import PaddingContainer from '../paddingContainer/paddingContainer';
 import Poto1 from '@/assets/images/Frame 1597883406.png';
 import Poto2 from '@/assets/images/Frame 1597883407.png';
 import Poto3 from '@/assets/images/Frame 1597883408.png';
 import Poto4 from '@/assets/images/Frame 1597883409.png';
 import Image from 'next/image';
+import Button from '../button/Button';
+import CountUp from 'react-countup';
+import Text from '../text/text';
 
 export function Statisfaction() {
   return (
@@ -35,24 +39,67 @@ export function Statisfaction() {
               <Image alt="" src={Poto2} />
             </RoidContainer>
             <ClientContainer>
-              {/* <Image alt='' src={Poto4} /> */}
-              <CircleDiv />
+              <TextClient>
+                <Text
+                  tag={'p'}
+                  family={'Satoshi'}
+                  color={' #FFF;'}
+                  weight={'700'}
+                  type={'title2'}
+                >
+                  <CountUp end={200} />+
+                </Text>
+                <Text
+                  tag={'p'}
+                  family={'Satoshi'}
+                  color={'#FFF;'}
+                  weight={''}
+                  type={'regular1'}
+                >
+                  Client Happy
+                </Text>
+              </TextClient>
             </ClientContainer>
           </ImgeContainer>
-          <ContainerContent>
+          <ContainerText>
             <CustomH3>
-              <h3> Smiles of Satisfaction </h3>
+              <Text
+                tag={'h2'}
+                family={'Asap'}
+                color="#A7ABB6;"
+                weight={'400'}
+                type={'regular2'}
+              >
+                Smiles of Satisfaction
+              </Text>
             </CustomH3>
             <CustomH1>
-              <h1>Celebrating Clients{"'"}</h1>
-              <h1>Happiness</h1>
+              <Text
+                tag={'h1'}
+                family="Satoshi"
+                weight="700"
+                color="#202020;"
+                type={'title1'}
+              >
+                Celebrating Clients{"'"} Happiness
+              </Text>
             </CustomH1>
             <CustomH3>
-              <h3>Unveiling the Heartwarming Stories Behind Our Celebrated</h3>
-              <h3>Clients{"'"} Happiness.</h3>
+              <Text
+                tag={'h2'}
+                family={'Asap'}
+                color="#A7ABB6;"
+                weight={'400'}
+                type={'regular2'}
+              >
+                Unveiling the Heartwarming Stories Behind Our Celebrated Clients
+                {"'"} Happiness.
+              </Text>
             </CustomH3>
-            <Button />
-          </ContainerContent>
+            <CustomButton>
+              <Button type={'primary'} content={'Let’s Talk'} />
+            </CustomButton>
+          </ContainerText>
         </ChildContainer>
       </PaddingContainer>
     </ContainerStatisfaction>

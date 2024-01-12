@@ -4,10 +4,15 @@ import Navbar from './navbar';
 import '@testing-library/jest-dom';
 
 describe('testing navbar component', () => {
-  test('check title text', () => {
+  test('check title text in Dekstop view', () => {
     render(<Navbar />);
-    const titleText = screen.getByText('Digi Dreams');
-    expect(titleText).toBeInTheDocument();
+    const mobileTitleText = screen.getByTestId('mobile-title');
+    const dekstopTitleText = screen.getByTestId(
+      'dektop-&-mobile-navbar-is-show',
+    );
+
+    expect(dekstopTitleText).toHaveStyle('display: block');
+    expect(mobileTitleText).toHaveStyle('display: none');
   });
   test('test nav menu', () => {
     render(<Navbar />);
@@ -23,14 +28,12 @@ describe('testing navbar component', () => {
     expect(blogText).toBeTruthy();
     expect(intershipText).toBeTruthy();
   });
-  test('check Lets Talk text in Dekstop view', () => {
+  test('check Lets Talk Text', () => {
     render(<Navbar />);
 
-    const letsTalkMobile = screen.getByTestId('mobile-contact');
-    const letsTalkDekstop = screen.getByTestId('dekstop-contact');
+    const letsTalk = screen.getByTestId('lets-talk');
 
-    expect(letsTalkMobile).toHaveStyle('display: none');
-    expect(letsTalkDekstop).toHaveStyle('display: inline');
+    expect(letsTalk).toHaveStyle('display: flex');
   });
   test('check hamburger icon in dekstop view', () => {
     render(<Navbar />);

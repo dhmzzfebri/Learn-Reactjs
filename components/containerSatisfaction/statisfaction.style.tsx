@@ -2,97 +2,125 @@ import styled from 'styled-components';
 import FontFamily from '@/components/text/text';
 
 export const ContainerStatisfaction = styled.div`
-  margin-top: 10%;
+  margin-top: 100px;
   display: flex;
   align-items: center;
   gap: 109px;
 `;
-export const ContainerContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-`;
-
-export const CustomH3 = styled.div`
-  font-family: 'Asap', sans-serif;
-  color: #a7abb6;
-  font-size: 16px;
-  padding-top: 10px;
-`;
-
-export const CustomH1 = styled.div`
-  color: #202020;
-  font-family: Satoshi;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  padding-top: 10px;
-`;
 
 export const ChildContainer = styled.div`
-  align-items: right;
+  align-items: center;
   display: flex;
   justify-content: space-between;
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
 `;
 
 export const ImgeContainer = styled.div`
   display: flex;
   margin-right: 10xp;
-  width: 319px;
-  height: 425px;
+  width: 570px;
+  height: 451px;
   flex-shrink: 0;
   position: relative;
+  flex-direction: column;
+  align-items: center;
+
+  @media only screen and (max-width: 768px) {
+    align-items: center;
+    margin-top: 30px;
+    width: 570px;
+    height: 451px;
+  }
+`;
+
+export const ContainerText = styled.div`
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (max-width: 768px) {
+    text-align: center;
+    display: flex;
+  }
+`;
+
+export const CustomH3 = styled.div`
+  line-height: 28px;
+  font-style: normal;
+`;
+
+export const CustomH1 = styled.div`
+  font-style: normal;
+  line-height: normal;
+  padding-bottom: 15px;
+`;
+export const CustomButton = styled.div`
+  margin-top: 30px;
 `;
 
 export const RoidContainer = styled.div`
   position: absolute;
-  left: 180px;
+  left: 230px;
   z-index: 3;
-  top: 5px;
+  top: 2px;
+
+  @media only screen and (max-width: 768px) {
+    text-align: center;
+    display: flex;
+    left: 270px;
+  }
 `;
 export const MirzaContainer = styled.div`
   position: absolute;
   z-index: 5;
-  top: 290px;
-  left: 120px;
+  top: 300px;
+  left: 185px;
+
+  @media only screen and (max-width: 768px) {
+    text-align: center;
+    display: flex;
+    left: 240px;
+    top: 300px;
+  }
 `;
 export const RohmanContainer = styled.div`
   position: absolute;
-  right: 175px;
+  right: 350px;
   top: 110px;
   z-index: 4;
   display: flex;
+
+  @media only screen and (max-width: 768px) {
+    text-align: center;
+    display: flex;
+    left: 40px;
+    top: 140px;
+  }
 `;
 export const ClientContainer = styled.div`
   position: absolute;
-  right: 40px;
-  top: 150px;
+  right: 230px;
+  top: 170px;
   z-index: 4;
-  display: flex;
-`;
-
-export const StyledButton = styled.button`
-  background-color: #0041e8;
-  color: white;
-  height: 40px;
-  width: 100px;
-  font-family: Inter;
-  font-size: 16px;
-  border: none;
-  border-radius: 35px;
-  cursor: pointer;
-  margin-top: 20px;
-
-  &:hover {
-    background-color: #3376b6;
-  }
-`;
-
-export const CircleDiv = styled.div`
+  text-align: center;
   width: 175px;
   height: 175px;
   background-color: #0041e8;
   border-radius: 50%;
   border: 4px solid #fff;
+  align-items: center;
+
+  @media only screen and (max-width: 768px) {
+    text-align: center;
+    left: 220px;
+    top: 160px;
+  }
+`;
+export const TextClient = styled.div`
+  margin-top: 40px;
 `;

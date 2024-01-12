@@ -16,7 +16,9 @@
   "dependencies": {
     "next": "latest",
     "react": "^18.2.0",
+    "react-countup": "^6.5.0",
     "react-dom": "^18.2.0",
+    "react-spring": "^9.7.3",
     "server-only": "^0.0.1",
     "styled-components": "^6.1.6"
   },
